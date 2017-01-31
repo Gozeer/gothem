@@ -13,44 +13,56 @@ Namespace gozeer.web.mvc
         ''' </summary>
         Private Const CacheKeyFormat As String = ":ViewCacheEntry:{0}:{1}:{2}:{3}:{4}"
         Public Property backendViewLocationFormats As String() = New String() {
-          "~/{4}/views/{3}{0}/{1}/{2}.vbhtml",
-          "~/{4}/views/{3}{0}/{1}/{2}.cshtml",
-          "~/{4}/views/{3}{0}/{1}/{2}.aspx",
-          "~/{4}/views/{3}{0}/{2}.vbhtml",
-          "~/{4}/views/{3}{0}/{2}.cshtml",
-          "~/{4}/views/{3}{0}/{2}.aspx",
-          "~/{4}/views/{3}{0}/{1}.vbhtml",
-          "~/{4}/views/{3}{0}/{1}.cshtml",
-          "~/{4}/views/{3}{0}/{1}.aspx",
-          "~/{4}/views/{3}{0}/shared/{2}.vbhtml",
-          "~/{4}/views/{3}{0}/shared/{2}.cshtml",
-          "~/{4}/views/{3}{0}/shared/{2}.aspx",
-          "~/{4}/views/{3}{0}/shared/{1}/{2}.vbhtml",
-          "~/{4}/views/{3}{0}/shared/{1}/{2}.cshtml",
-          "~/{4}/views/{3}{0}/shared/{1}/{2}.aspx"}
+          "~/{4}/views/{0}/{1}/{2}.vbhtml",
+          "~/{4}/views/{0}/{1}/{2}.cshtml",
+          "~/{4}/views/{0}/{1}/{2}.aspx",
+          "~/{4}/views/{0}/{2}.vbhtml",
+          "~/{4}/views/{0}/{2}.cshtml",
+          "~/{4}/views/{0}/{2}.aspx",
+          "~/{4}/views/{0}/{1}.vbhtml",
+          "~/{4}/views/{0}/{1}.cshtml",
+          "~/{4}/views/{0}/{1}.aspx",
+          "~/{4}/views/{0}/shared/{2}.vbhtml",
+          "~/{4}/views/{0}/shared/{2}.cshtml",
+          "~/{4}/views/{0}/shared/{2}.aspx",
+          "~/{4}/views/{0}/shared/{1}/{2}.vbhtml",
+          "~/{4}/views/{0}/shared/{1}/{2}.cshtml",
+          "~/{4}/views/{0}/shared/{1}/{2}.aspx"}
         Public Property pluginViewLocationFormats As String() = New String() {
-            "~/lookandfeel/{0}/{3}views/{1}/{2}.vbhtml",
-            "~/lookandfeel/{0}/{3}views/{1}/{2}.cshtml",
-            "~/lookandfeel/{0}/{3}views/{1}/{2}.aspx",
-            "~/lookandfeel/{0}/{3}views/{2}.vbhtml",
-            "~/lookandfeel/{0}/{3}views/{2}.cshtml",
-            "~/lookandfeel/{0}/{3}views/{2}.aspx",
-            "~/lookandfeel/{0}/{3}views/{1}.vbhtml",
-            "~/lookandfeel/{0}/{3}views/{1}.cshtml",
-            "~/lookandfeel/{0}/{3}views/{1}.aspx",
-            "~/lookandfeel/{0}/{3}shared/{2}.vbhtml",
-            "~/lookandfeel/{0}/{3}shared/{2}.cshtml",
-            "~/lookandfeel/{0}/{3}shared/{2}.aspx",
-            "~/lookandfeel/{0}/{3}shared/{1}/{2}.vbhtml",
-            "~/lookandfeel/{0}/{3}shared/{1}/{2}.cshtml",
-            "~/lookandfeel/{0}/{3}shared/{1}/{2}.aspx",
-            "~/lookandfeel/{0}/shared/{2}.vbhtml",
-            "~/lookandfeel/{0}/shared/{2}.cshtml",
-            "~/lookandfeel/{0}/shared/{2}.aspx",
-            "~/lookandfeel/{0}/shared/{1}/{2}.vbhtml",
-            "~/lookandfeel/{0}/shared/{1}/{2}.cshtml",
-            "~/lookandfeel/{0}/shared/{1}/{2}.aspx"}
+            "~/lookandfeel/{0}/views/plugins/{3}/{1}/{2}.vbhtml",
+            "~/lookandfeel/{0}/views/plugins/{3}/{1}/{2}.cshtml",
+            "~/lookandfeel/{0}/views/plugins/{3}/{1}/{2}.aspx",
+            "~/lookandfeel/{0}/views/plugins/{3}/{2}.vbhtml",
+            "~/lookandfeel/{0}/views/plugins/{3}/{2}.cshtml",
+            "~/lookandfeel/{0}/views/plugins/{3}/{2}.aspx",
+            "~/lookandfeel/{0}/views/plugins/{3}/{1}.vbhtml",
+            "~/lookandfeel/{0}/views/plugins/{3}/{1}.cshtml",
+            "~/lookandfeel/{0}/views/plugins/{3}/{1}.aspx",
+          "~/lookandfeel/{0}/views/shared/{2}.vbhtml",
+          "~/lookandfeel/{0}/views/shared/{2}.cshtml",
+          "~/lookandfeel/{0}/views/shared/{2}.aspx",
+          "~/lookandfeel/{0}/views/shared/{1}/{2}.vbhtml",
+          "~/lookandfeel/{0}/views/shared/{1}/{2}.cshtml",
+          "~/lookandfeel/{0}/views/shared/{1}/{2}.aspx"}
+
+        Public Property backendPluginViewLocationFormats As String() = New String() {
+            "~/{4}/views/plugins/{3}/{1}/{2}.vbhtml",
+            "~/{4}/views/plugins/{3}/{1}/{2}.cshtml",
+            "~/{4}/views/plugins/{3}/{1}/{2}.aspx",
+            "~/{4}/views/plugins/{3}/{2}.vbhtml",
+            "~/{4}/views/plugins/{3}/{2}.cshtml",
+            "~/{4}/views/plugins/{3}/{2}.aspx",
+            "~/{4}/views/plugins/{3}/{1}.vbhtml",
+            "~/{4}/views/plugins/{3}/{1}.cshtml",
+            "~/{4}/views/plugins/{3}/{1}.aspx",
+          "~/{4}/views/{0}/shared/{2}.vbhtml",
+          "~/{4}/views/{0}/shared/{2}.cshtml",
+          "~/{4}/views/{0}/shared/{2}.aspx",
+          "~/{4}/views/{0}/shared/{1}/{2}.vbhtml",
+          "~/{4}/views/{0}/shared/{1}/{2}.cshtml",
+          "~/{4}/views/{0}/shared/{1}/{2}.aspx"}
         Public Sub New()
+            MyBase.FileExtensions = New String() {"vbhtml", "cshtml", "aspx"}
             MyBase.ViewLocationFormats = New String() {
             "~/lookandfeel/{0}/views/{1}/{2}.vbhtml",
             "~/lookandfeel/{0}/views/{1}/{2}.cshtml",
@@ -67,15 +79,22 @@ Namespace gozeer.web.mvc
             "~/lookandfeel/{0}/views/shared/{1}/{2}.vbhtml",
             "~/lookandfeel/{0}/views/shared/{1}/{2}.cshtml",
             "~/lookandfeel/{0}/views/shared/{1}/{2}.aspx"}
+            MyBase.PartialViewLocationFormats = Me.ViewLocationFormats
+            MyBase.MasterLocationFormats = Me.ViewLocationFormats
 
         End Sub
         Private Shared _emptyLocations As String() = New String() {}
         Protected Overrides Function CreatePartialView(controllerContext As ControllerContext, partialPath As String) As IView
-            Return New RazorView(controllerContext, partialPath, Nothing, False, FileExtensions)
+
+            Return New System.Web.Mvc.RazorView(controllerContext, partialPath, Nothing, False, FileExtensions)
         End Function
 
         Protected Overrides Function CreateView(controllerContext As ControllerContext, viewPath As String, masterPath As String) As IView
-            Return New RazorView(controllerContext, viewPath, masterPath, False, FileExtensions)
+            Dim enableViewstart As Boolean = False
+            If String.IsNullOrEmpty(masterPath) Then
+                enableViewstart = True
+            End If
+            Return New System.Web.Mvc.RazorView(controllerContext, viewPath, masterPath, enableViewstart, FileExtensions)
         End Function
 
         Public Overrides Function FindPartialView(controllerContext As ControllerContext, partialViewName As String, useCache As Boolean) As ViewEngineResult
@@ -86,7 +105,7 @@ Namespace gozeer.web.mvc
             If [String].IsNullOrEmpty(ViewPath) Then
                 Return New ViewEngineResult(searchedLocations)
             End If
-            Return New ViewEngineResult(CreateView(controllerContext, ViewPath, ""), Me)
+            Return New ViewEngineResult(CreatePartialView(controllerContext, ViewPath), Me)
         End Function
 
         Public Overrides Function FindView(controllerContext As ControllerContext, viewName As String, masterName As String, useCache As Boolean) As ViewEngineResult
@@ -119,9 +138,16 @@ Namespace gozeer.web.mvc
 
 
             If isBackend Then
-                For Each viewLocationFormat As String In Me.backendViewLocationFormats
-                    locations.Add(New ViewLocation(viewLocationFormat))
-                Next
+                If String.IsNullOrEmpty(PluginName) Then
+                    For Each viewLocationFormat As String In Me.backendViewLocationFormats
+                        locations.Add(New ViewLocation(viewLocationFormat))
+                    Next
+                Else
+                    For Each viewLocationFormat As String In Me.backendPluginViewLocationFormats
+                        locations.Add(New ViewLocation(viewLocationFormat))
+                    Next
+                End If
+
                 AreaName = ThemeSettings.BackendPath
             Else
                 If Not String.IsNullOrEmpty(PluginName) Then
