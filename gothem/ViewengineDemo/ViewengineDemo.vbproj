@@ -183,8 +183,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="lookandfeed\default\Views\Home\Index.vbhtml" />
-    <Content Include="lookandfeed\default\Views\web.config" />
+    <Content Include="lookandfeel\default\testplugin\Views\plugin\Index.vbhtml" />
+    <Content Include="lookandfeel\default\testplugin\Views\web.config" />
+    <Content Include="lookandfeel\default\Views\Home\Index.vbhtml" />
+    <Content Include="lookandfeel\default\Views\web.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -206,7 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="lookandfeed\default\Views\plugin\" />
+    <Folder Include="lookandfeel\default\Views\plugin\" />
     <Folder Include="Models\" />
     <Folder Include="Views\plugin\" />
   </ItemGroup>
