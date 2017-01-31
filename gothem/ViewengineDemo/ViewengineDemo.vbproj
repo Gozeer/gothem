@@ -180,9 +180,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="lookandfeel\default\testplugin\Views\plugin\Index.vbhtml" />
     <Content Include="lookandfeel\default\testplugin\Views\web.config" />
     <Content Include="lookandfeel\default\Views\Home\Index.vbhtml" />

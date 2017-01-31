@@ -12,6 +12,7 @@ End Code
 </head>
 <body>
     <div> 
+        Plugin View
     </div>
 </body>
 </html>

@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "gothem", "gothem\gothem.vbproj", "{97B8EEEF-3AE0-4F07-AACD-DC46642C1BC9}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ViewengineDemo", "ViewengineDemo\ViewengineDemo.vbproj", "{8069E7C6-4CBC-4DE7-8293-9BF0113D0E15}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{97B8EEEF-3AE0-4F07-AACD-DC46642C1BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97B8EEEF-3AE0-4F07-AACD-DC46642C1BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97B8EEEF-3AE0-4F07-AACD-DC46642C1BC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8069E7C6-4CBC-4DE7-8293-9BF0113D0E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8069E7C6-4CBC-4DE7-8293-9BF0113D0E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8069E7C6-4CBC-4DE7-8293-9BF0113D0E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8069E7C6-4CBC-4DE7-8293-9BF0113D0E15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
