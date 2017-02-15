@@ -9,7 +9,7 @@ Namespace gozeer.web.mvc
         End Sub
 
         Public Overrides Function Format(viewName As String, controllerName As String, plugin As String, Optional area As String = "") As String
-            Return String.Format(CultureInfo.InvariantCulture, _virtualPathFormatString, gozeer.web.mvc.ThemeSettings.ThemeName, controllerName, viewName, plugin, area)
+            Return String.Format(CultureInfo.InvariantCulture, _virtualPathFormatString, gozeer.web.mvc.ThemeSettings.ThemeName, viewName, controllerName, plugin, area)
         End Function
 
 

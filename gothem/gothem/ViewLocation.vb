@@ -14,7 +14,7 @@ Namespace gozeer.web.mvc
 
 
             Try
-                Return String.Format(CultureInfo.InvariantCulture, _virtualPathFormatString, gozeer.web.mvc.ThemeSettings.ThemeName, controllerName, viewName, plugin, area)
+                Return String.Format(CultureInfo.InvariantCulture, _virtualPathFormatString, gozeer.web.mvc.ThemeSettings.ThemeName, viewName, controllerName, plugin, area)
             Catch ex As Exception
                 Throw New ArgumentException(_virtualPathFormatString)
             End Try

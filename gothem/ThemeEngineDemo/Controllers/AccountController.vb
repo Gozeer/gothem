@@ -6,7 +6,7 @@ Imports Microsoft.AspNet.Identity.Owin
 Imports Microsoft.Owin.Security
 Imports Owin
 
-<Authorize, ThemeSettings(PluginName:="AccountManager")>
+<Authorize, ThemeSettings(GetType(Control))>
 Public Class AccountController
     Inherits Controller
     Private _signInManager As ApplicationSignInManager
