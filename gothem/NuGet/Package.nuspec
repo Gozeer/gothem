@@ -2,8 +2,8 @@
 <package >
   <metadata>
     <id>Gozeer.Mvc.Theme.Engine</id>
-    <version>1.0.1</version>
-    <title>GoThem</title>
+    <version>1.0.3</version>
+    <title>Gozeer ASP.NET MVC Theme Engine</title>
     <authors>Gozeer</authors>
     <owners></owners>
     <description>

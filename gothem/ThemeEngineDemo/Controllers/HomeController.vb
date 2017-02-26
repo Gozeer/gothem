@@ -1,4 +1,5 @@
-﻿Public Class HomeController
+﻿<ThemeSettings(GetType(HomeController))>
+Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult

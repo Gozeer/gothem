@@ -8,8 +8,8 @@ Namespace gozeer.web.mvc
         Inherits VirtualPathProviderViewEngine
         ''' <summary>
         ''' 0 Theme
-        ''' 1 Controller
-        ''' 2 Action
+        ''' 1 Action
+        ''' 2 Controller
         ''' 3 Plugin
         ''' 4 Area
         ''' </summary>
@@ -24,50 +24,66 @@ Namespace gozeer.web.mvc
 
 
             MyBase.ViewLocationFormats = New String() {
-                "~/lookandfeel/{0}/Views/{2}/{1}.aspx",
-                "~/lookandfeel/{0}/Views/{2}/{1}.ascx",
-                "~/lookandfeel/{0}/Views/Shared/{1}.aspx",
-                "~/lookandfeel/{0}/Views/Shared/{1}.ascx",
-                "~/lookandfeel/{0}/Views/{2}/{1}.cshtml",
-                "~/lookandfeel/{0}/Views/{2}/{1}.vbhtml",
-                "~/lookandfeel/{0}/Views/Shared/{1}.cshtml",
-                "~/lookandfeel/{0}/Views/Shared/{1}.vbhtml"
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/{2}/{1}.aspx",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/{2}/{1}.ascx",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/Shared/{1}.aspx",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/Shared/{1}.ascx",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/{2}/{1}.cshtml",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/{2}/{1}.vbhtml",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/Shared/{1}.cshtml",
+                "~/_gozeer/frontend/lookandfeel/{0}/Views/Shared/{1}.vbhtml"
             }
             MyBase.PartialViewLocationFormats = MyBase.ViewLocationFormats
             MyBase.MasterLocationFormats = MyBase.ViewLocationFormats
 
             MyBase.AreaViewLocationFormats = New String() {
-               "~/Areas/{4}/{0}/Views/{2}/{1}.aspx",
-               "~/Areas/{4}/{0}/Views/{2}/{1}.ascx",
-               "~/Areas/{4}/{0}/Views/Shared/{1}.aspx",
-               "~/Areas/{4}/{0}/Views/Shared/{1}.ascx",
-               "~/Areas/{4}/{0}/Views/{2}/{1}.cshtml",
-               "~/Areas/{4}/{0}/Views/{2}/{1}.vbhtml",
-               "~/Areas/{4}/{0}/Views/Shared/{1}.cshtml",
-               "~/Areas/{4}/{0}/Views/Shared/{1}.vbhtml"}
+               "~/_gozeer/backend/{4}Views/{2}/{1}.aspx",
+               "~/_gozeer/backend/{4}Views/{2}/{1}.ascx",
+               "~/_gozeer/backend/{4}Views/Shared/{1}.aspx",
+               "~/_gozeer/backend/{4}Views/Shared/{1}.ascx",
+               "~/_gozeer/backend/{4}Views/{2}/{1}.cshtml",
+               "~/_gozeer/backend/{4}Views/{2}/{1}.vbhtml",
+               "~/_gozeer/backend/{4}Views/Shared/{1}.cshtml",
+               "~/_gozeer/backend/{4}Views/Shared/{1}.vbhtml"}
             MyBase.AreaPartialViewLocationFormats = MyBase.AreaViewLocationFormats
             MyBase.AreaMasterLocationFormats = MyBase.AreaViewLocationFormats
 
             Me.PluginViewLocationFormats = New String() {
-                "~/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.aspx",
-                "~/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.ascx",
-                "~/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.aspx",
-                "~/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.ascx",
-                "~/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.cshtml",
-                "~/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.vbhtml",
-                "~/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.cshtml",
-                "~/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.vbhtml"
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.aspx",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.ascx",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.aspx",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.ascx",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.cshtml",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/{2}/{1}.vbhtml",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.cshtml",
+                "~/_gozeer/frontend/lookandfeel/{0}/plugins/{3}/Views/Shared/{1}.vbhtml",
+                "~/_gozeer/plugins/{3}/Views/{2}/{1}.aspx",
+                "~/_gozeer/plugins/{3}/Views/{2}/{1}.ascx",
+                "~/_gozeer/plugins/{3}/Views/Shared/{1}.aspx",
+                "~/_gozeer/plugins/{3}/Views/Shared/{1}.ascx",
+                "~/_gozeer/plugins/{3}/Views/{2}/{1}.cshtml",
+                "~/_gozeer/plugins/{3}/Views/{2}/{1}.vbhtml",
+                "~/_gozeer/plugins/{3}/Views/Shared/{1}.cshtml",
+                "~/_gozeer/plugins/{3}/Views/Shared/{1}.vbhtml"
             }
 
             Me.AreaPluginViewLocationFormats = New String() {
-               "~/Areas/{4}/{0}/plugins/{3}/Views/{2}/{1}.aspx",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/{2}/{1}.ascx",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/Shared/{1}.aspx",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/Shared/{1}.ascx",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/{2}/{1}.cshtml",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/{2}/{1}.vbhtml",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/Shared/{1}.cshtml",
-               "~/Areas/{4}/{0}/plugins/{3}/Views/Shared/{1}.vbhtml"}
+               "~/_gozeer/backend/{4}plugins/{3}/Views/{2}/{1}.aspx",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/{2}/{1}.ascx",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/Shared/{1}.aspx",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/Shared/{1}.ascx",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/{2}/{1}.cshtml",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/{2}/{1}.vbhtml",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/Shared/{1}.cshtml",
+               "~/_gozeer/backend/{4}plugins/{3}/Views/Shared/{1}.vbhtml",
+               "~/_gozeer/plugins/{3}/backend/Views/{2}/{1}.aspx",
+               "~/_gozeer/plugins/{3}/backend/Views/{2}/{1}.ascx",
+               "~/_gozeer/plugins/{3}/backend/Views/Shared/{1}.aspx",
+               "~/_gozeer/plugins/{3}/backend/Views/Shared/{1}.ascx",
+               "~/_gozeer/plugins/{3}/backend/Views/{2}/{1}.cshtml",
+               "~/_gozeer/plugins/{3}/backend/Views/{2}/{1}.vbhtml",
+               "~/_gozeer/plugins/{3}/backend/Views/Shared/{1}.cshtml",
+               "~/_gozeer/plugins/{3}/backend/Views/Shared/{1}.vbhtml"}
         End Sub
 
 
@@ -112,15 +128,35 @@ Namespace gozeer.web.mvc
             If String.IsNullOrEmpty(ViewName) Then
                 Return result
             End If
+
+
+
+
             Dim locations As New List(Of ViewLocation)()
-            Dim isBackend As Boolean = False
+                Dim isBackend As Boolean = False
             Dim PluginName As String = ""
+
+
+            For Each t In cntx.Controller.GetType.Assembly.GetTypes().Where(Function(tx) GetType(IThemeBaseSettings).IsAssignableFrom(tx)) ' tx.IsClass AndAlso tx.IsAbstract = False) '.Where(Function(tx) tx.IsAssignableFro(GetType(IThemeBaseSettings))) 'And tx.IsInterface = False And (tx.IsClass AndAlso tx.IsAbstract = False))
+                If GetType(IThemeBaseSettings).IsAssignableFrom(t) Then
+                    If Not t.IsInterface Then
+                        If t.IsClass AndAlso Not t.IsAbstract Then
+                            Dim Plugin = CType(Activator.CreateInstance(t), IThemeBaseSettings)
+                            PluginName = Plugin.PluginName
+                            Exit For
+                        End If
+                    End If
+                End If
+            Next
 
 
             If cntx.Controller.GetType.GetCustomAttributes(GetType(ThemeSettingsAttribute), True).Any Then
                 Dim ThemeSettings As ThemeSettingsAttribute = cntx.Controller.GetType.GetCustomAttributes(GetType(ThemeSettingsAttribute), True).FirstOrDefault()
                 isBackend = ThemeSettings.isBackend
-                PluginName = ThemeSettings.PluginName
+                If (Not String.IsNullOrEmpty(ThemeSettings.PluginName)) Then
+                    PluginName = ThemeSettings.PluginName
+                End If
+
             End If
 
             If Not String.IsNullOrEmpty(AreaName) Then
@@ -151,12 +187,25 @@ Namespace gozeer.web.mvc
             End If
 
 
-
+            If Not String.IsNullOrEmpty(AreaName) Then
+                Dim remArea As String = AreaName
+                AreaName = remArea & "/"
+            End If
 
             searchedLocations = New String(locations.Count - 1) {}
+
+            If ViewName.StartsWith("~") Then
+                searchedLocations = New String() {ViewName}
+            End If
             For i As Integer = 0 To locations.Count - 1
                 Dim location As ViewLocation = locations(i)
-                Dim virtualPath As String = location.Format(ViewName, ControllerName, PluginName, AreaName)
+                Dim virtualPath As String
+                If ViewName.StartsWith("~") Then
+                    virtualPath = ViewName
+                Else
+                    virtualPath = location.Format(ViewName, ControllerName, PluginName, AreaName)
+                End If
+
                 Dim virtualPathDisplayInfo As DisplayInfo = DisplayModeProvider.GetDisplayInfoForVirtualPath(virtualPath, cntx.HttpContext, Function(path)
                                                                                                                                                 Return FileExists(cntx, path)
                                                                                                                                             End Function, cntx.DisplayMode)
